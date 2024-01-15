@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBAPP - Dashboard</title>
+    <link rel="stylesheet" href="../static/scanstyle.css">
+    <script src="https://kit.fontawesome.com/1d109bfe17.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="sidebar">
+        <h2>SCANNER</h2>
+        <ul>
+            <li><a href="{{ url_for('index') }}"><i class="fas fa-chart-bar"></i> Dashboard</a></li>
+            <li><a href="{{ url_for('scan') }}"><i class="fas fa-search"></i> Scan</a></li>
+            <li><a href="{{ url_for('history') }}"><i class="fas fa-history"></i> History</a></li>
+        </ul>
+    </div>
+    <div class="main_content">
+        <h2>Scan page</h2>
+        <form method="post" action="{{ url_for('scan') }}">
+            <p>Paste your page URL to start scanning:</p>
+            <div class="scan-container">
+                <input type="text" name="urlInput" placeholder="Enter URL" required>
+                <button type="submit">Start Scan</button>
+            </div>
+        </form>
+
+        {% if results %}
+            <div class="output-container">
+                <h3>Scan Output:</h3>
+                <ul>
+                    {% for result in results %}
+                        <li>{{ result }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    </div>
+    </div>
+    <script src="../static/script.js"></script>
+</body>
+</html>

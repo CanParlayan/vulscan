@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBAPP - Dashboard</title>
+    <link rel="stylesheet" href="../static/historystyle.css">
+    <script src="https://kit.fontawesome.com/1d109bfe17.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>SCANNER</h2>
+            <ul>
+               <li><a href="{{ url_for('index') }}"><i class="fas fa-chart-bar"></i> Dashboard</a></li>
+                <li><a href="{{ url_for('scan') }}"><i class="fas fa-search"></i> Scan</a></li>
+                <li><a href="{{ url_for('history') }}"><i class="fas fa-history"></i> History</a></li>
+            </ul>
+        </div>
+        <div class="main_content">
+            <h2>History page</h2>
+            <p>This is the content of the History page.</p>
+        </div>
+    </div>
+    <script src="../static/script.js"></script>
+</body>
+</html>
