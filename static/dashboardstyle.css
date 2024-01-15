@@ -1,0 +1,105 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #d9f7fc;
+}
+
+.wrapper{
+    display: flex;
+    position: relative;
+}
+
+.main_content{
+    width: 100%;
+    margin-left: 180px;
+}
+
+.charts {
+    display: flex;
+}
+
+.chart1 canvas {
+    max-width: 100%;
+    height: auto; 
+    max-height: 300px; 
+    margin: 0px 30px 30px 30px;
+}
+
+.chart1 p{
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.chart1 {
+    background-color: rgba(131, 125, 234, 0.2);
+    width: fit-content;
+    height: fit-content;
+    border-radius: 50px;
+    margin: 50px;
+    padding: 0px 5px 5px 5px;
+}
+
+.chart2 {
+    background-color: rgba(131, 125, 234, 0.2);
+    width: fit-content;
+    height: fit-content;
+    border-radius: 50px;
+    margin-top: 50px;
+    padding: 0px 5px 5px 5px;
+}
+
+.chart2 canvas {
+    max-width: 100%;
+    height: auto;
+    margin: 0px 30px 30px 30px;
+}
+.chart2 p{
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.main_content{
+    padding: 20px;
+}
+
+.sidebar{
+    position: fixed;
+    width: 180px;
+    height: 100%;
+    background: #837dea;
+}
+
+.sidebar h2{
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    color: #fff;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li a{
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    transition: margin-left 0.3s;
+}
+
+.sidebar ul li{
+    padding: 20px;
+    color: #fff;
+}
+.sidebar ul li:hover{
+    background: #9f9af0;
+}
+.sidebar ul li:hover a{
+    color: #21404d;
+    margin-left: 10px;
+}
+
+
